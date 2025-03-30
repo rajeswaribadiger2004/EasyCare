@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .form-group { margin: 10px 0; }
+        .hidden { display: none; }
+        .feedback { margin-top: 20px; }
+    </style>
+    <link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a id="nav-home" href="home.php">Home</a></li>
+            <li><a id="nav-about" href="about.html">About</a></li>
+            <li><a id="nav-services" href="service.html">Services</a></li>
+            <li><a id="nav-pricing" href="#">Pricing</a></li>
+            <li><a id="nav-pages" href="#">Pages</a></li>
+            <li><a id="nav-appointment" href="appointment.html">Appointment</a></li>
+            <li><a id="nav-search" href="#">Search</a></li>
+            <li><a id="nav-contact" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+
+<h2>Book an Appointment</h2>
+<form id="appointmentForm" action="appointment.php" method="post">
+    <div class="form-group">
+        <label>Name/ಹೆಸರು:</label>
+        <input type="text" name="name" required>
+    </div>
+    <div class="form-group">
+        <label>Phone/ದೂರವಾಣಿ ಸಂಖ್ಯೆ:</label>
+        <input type="text" name="phone" required>
+    </div>
+    <div class="form-group">
+        <label>Age/ ವಯಸ್ಸು:</label>
+        <input type="number" name="age" required>
+    </div>
+    <div class="form-group">
+        <label>Date/ದಿನಾಂಕ:</label>
+        <input type="date" name="date" required>
+    </div>
+    <div class="form-group">
+        <label>Time/ಸಮಯ:</label>
+        <input type="time" name="time" required>
+    </div>
+    <div class="form-group">
+        <label>Type/ಪ್ರಕಾರ:</label>
+        <select name="appointment_type" id="appointmentType" required onchange="toggleAppointmentType()">
+            <option value="">Select</option>
+            <option value="Physical">Physical/ದೈಹಿಕ</option>
+            <option value="Video Conference">Video Conference/ವೀಡಿಯೋ ಸಮಾವೇಶ</option>
+        </select>
+    </div>
+    
+    <!-- Physical Appointment -->
+    <div id="physicalOptions" class="hidden">
+        <label>Doctor List /ವೈದ್ಯರ ಪಟ್ಟಿ(Karnataka)</label>
+        <select name="doctor_name">
+            <option>Dr. Ranjitha, Bangalore</option>
+            <option>Dr. Rakesh, Mysore</option>
+            <option>Dr. Ranjeshwari, Mangalore</option>
+            <option>Dr. Kumar, Udupi</option>
+            <option>Dr. Badiger, Hubli</option>
+            <option>Dr. Anupama, Dharwad</option>
+            <option>Dr. Sanjay, Belgaum</option>
+            <option>Dr. Manu, Tumkur</option>
+            <option>Dr. Nayak, Bijapur</option>
+            <option>Dr. Kavitha, Shimoga</option>
+        </select>
+    </div>
+
+    <!-- Video Conference Appointment -->
+    <div id="videoOptions" class="hidden">
+        <label>Scan QR for Payment/ಪಾವತಿ:</label>
+        <div id="paymentQR">
+            <img src="data:image/png;base64,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" alt="">
+        </div>
+        <input type="hidden" name="payment_status" value="1">
+    </div>
+
+    <button type="submit">Submit/ಸಲ್ಲಿಸಿ </button>
+</form>
+
+<div id="appointmentConfirmation" class="hidden">
+    <p>Appointment booked successfully!/ಯಶಸ್ವಿ</p>
+    <p>if you selected a Video Conference <a href="video.html">Join Here!!</a>Thank You</p>
+    <p>Date and Time: <span id="appointmentDateTime"></span></p>
+    <button onclick="showFeedbackForm()">Submit Your Experience</button>
+</div>
+
+<!-- Feedback Section -->
+<div id="feedbackForm" class="hidden feedback">
+    <h3>Feedback Form</h3>
+    <form action="submit_feedback.php" method="post">
+        <label>Rating (1-5):</label>
+        <input type="number" name="stars" min="1" max="5" required>
+        <br>
+        <label>Description:</label>
+        <textarea name="description" required></textarea>
+        <br>
+        <button type="submit">Submit Feedback</button>
+    </form>
+</div>
+
+<script>
+function toggleAppointmentType() {
+    const appointmentType = document.getElementById('appointmentType').value;
+    document.getElementById('physicalOptions').classList.toggle('hidden', appointmentType !== 'Physical');
+    document.getElementById('videoOptions').classList.toggle('hidden', appointmentType !== 'Video Conference');
+}
+
+function showFeedbackForm() {
+    document.getElementById('feedbackForm').classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EasyCare</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a id="nav-home" href="home.php" data-en="Home" data-kn="ಮನೆ">Home</a></li>
+            <li><a id="nav-about" href="about.html" data-en="About" data-kn="ಬಗ್ಗೆ">About</a></li>
+            <li><a id="nav-services" href="service.html" data-en="Services" data-kn="ಸೇವೆಗಳು">Services</a></li>
+            <li><a id="nav-pricing" href="#" data-en="Pricing" data-kn="ಬೆಲೆ ನಿಗದಿ">Pricing</a></li>
+            <li><a id="nav-pages" href="#" data-en="Pages" data-kn="ಪುಟಗಳು">Pages</a></li>
+            <li><a id="nav-appointment" href="appointment.html" data-en="Appointment" data-kn="ನಿಯೋಜನೆ">Appointment</a></li>
+            <li><a id="nav-search" href="#" data-en="Search" data-kn="ಹುಡುಕು">Search</a></li>
+            <li><a id="nav-contact" href="contact" data-en="contact.html" data-kn="ಸಂಪರ್ಕ">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Language Toggle -->
+    <div id="language-toggle">
+        <button id="lang-en" onclick="setLanguage('en')">English</button>
+        <button id="lang-kn" onclick="setLanguage('kn')">ಕನ್ನಡ</button>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-dark text-white text-center py-5">
+        <h1 id="header-title" data-en="Contact Us" data-kn="ನಮಗೆ ಸಂಪರ್ಕಿಸಿ">Contact Us</h1>
+        <p id="header-subtitle" data-en="Feel free to reach out. We're here to help." data-kn="ನೀವು ಧೈರ್ಯವಾಗಿ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಬಹುದು. ನಾವು ಇಲ್ಲಿ ಸಹಾಯ ಮಾಡಲು ಇದ್ದೇವೆ.">Feel free to reach out. We're here to help.</p>
+    </header>
+
+    <!-- Contact Form -->
+    <section class="container my-5">
+        <h2 id="form-title" data-en="Get In Touch" data-kn="ಸಂಪರ್ಕದಲ್ಲಿರಿ">Get In Touch</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name" data-en="Name" data-kn="ಹೆಸರು">Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone" data-en="Phone Number" data-kn="ದೂರವಾಣಿ ಸಂಖ್ಯೆ">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="email" data-en="Email" data-kn="ಇಮೇಲ್">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="message" data-en="Message" data-kn="ಸಂದೇಶ">Message</label>
+                <textarea id="message" class="form-control" rows="4" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" data-en="Submit" data-kn="ಸಲ್ಲಿಸು">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EasyCare. All Rights Reserved.</p>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

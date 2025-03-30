@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Health Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+    <header>
+        <h1 id="header-title">EasyCare</h1>
+        <button id="lang-toggle" onclick="toggleLanguage()">ಕನ್ನಡ</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a id="nav-home" href="home.php" data-en="Home" data-kn="ಮನೆ">Home</a></li>
+            <li><a id="nav-about" href="about.html" data-en="About" data-kn="ಬಗ್ಗೆ">About</a></li>
+            <li><a id="nav-services" href="sservice.html" data-en="Services" data-kn="ಸೇವೆಗಳು">Services</a></li>
+            <li><a id="nav-pricing" href="#" data-en="Pricing" data-kn="ಬೆಲೆ ನಿಗದಿ">Pricing</a></li>
+            <li><a id="nav-pages" href="#" data-en="Pages" data-kn="ಪುಟಗಳು">Pages</a></li>
+            <li><a id="nav-appointment" href="appointment.html" data-en="Appointment" data-kn="ನಿಯೋಜನೆ">Appointment</a></li>
+            <li><a id="nav-search" href="#" data-en="Search" data-kn="ಹುಡುಕು">Search</a></li>
+            <li><a id="nav-contact" href="contact.html" data-en="Contact" data-kn="ಸಂಪರ್ಕ">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <header class="bg-dark text-white text-center py-5">
+        <h1 id="header-title" data-en="Our Health Services" data-kn="ನಮ್ಮ ಆರೋಗ್ಯ ಸೇವೆಗಳು">Our Health Services</h1><br>
+       <br> <p id="header-subtitle" data-en="Your health, our priority. Explore our expert medical services." data-kn="ನಿಮ್ಮ ಆರೋಗ್ಯ, ನಮ್ಮ ಆದ್ಯತೆ. ನಮ್ಮ ತಜ್ಞ ವೈದ್ಯಕೀಯ ಸೇವೆಗಳನ್ನು ಅನ್ವೇಷಿಸಿ.">Your health, our priority. Explore our expert medical services.</p>
+        <!-- <button onclick="toggleLanguage()" class="btn btn-light mt-3" id="lang-toggle">ಕನ್ನಡ</button> -->
+    </header>
+
+    <section class="container my-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- General Medicine Card -->
+            <div class="col">
+                <div class="card service-card shadow-lg border-light">
+                    <img src="https://th.bing.com/th/id/OIP.uVYLURg7HQX6mj9FYrq59AHaEK?rs=1&pid=ImgDetMain" alt="General medicine">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" data-en="General medicine" data-kn="ಸಾಮಾನ್ಯ ವೈದ್ಯಕೀಯ">General medicine</h5>
+                        <p class="card-text" data-en="Expert care for health, from routine exams to specialized treatments." data-kn="ನಿತ್ಯದ ಪರೀಕ್ಷೆಗಳಿಂದ ವಿಶೇಷ ಚಿಕಿತ್ಸೆಗಳವರೆಗೆ ಆರೋಗ್ಯಕ್ಕೆ ತಜ್ಞ ಪರಾಮರ್ಶೆ.">Expert care for health, from routine exams to specialized treatments.</p>
+                        <a href="appointment.html" class="btn btn-success" data-en="Visit doctor" data-kn="ವೈದ್ಯರನ್ನು ಭೇಟಿ ಮಾಡಿ">Visit doctor</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cardiology Card -->
+            <div class="col">
+                <div class="card service-card shadow-lg border-light">
+                    <img src="https://www.rumcsi.org/wp-content/uploads/2020/09/Cardiology-scaled.jpg" class="card-img-top" alt="Cardiology">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" data-en="Cardiology" data-kn="ಹೃದ್ರೋಗಶಾಸ್ತ್ರ">Cardiology</h5>
+                        <p class="card-text" data-en="Comprehensive heart care, from diagnostics to specialized treatment options." data-kn="ರೋಗನಿರ್ಣಯದಿಂದ ವಿಶೇಷ ಚಿಕಿತ್ಸೆವರೆಗೆ ಸಮಗ್ರ ಹೃದಯ ಆರೈಕೆ.">Comprehensive heart care, from diagnostics to specialized treatment options.</p>
+                        <a href="appointment.html" class="btn btn-success" data-en="Visit doctor" data-kn="ವೈದ್ಯರನ್ನು ಭೇಟಿ ಮಾಡಿ">Visit doctor</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gynecology Card -->
+            <div class="col">
+                <div class="card service-card shadow-lg border-light">
+                    <img src="https://www.bmj.com/careers/getasset/d9f32571-1be4-4eee-9b5b-c96dd5bc0fff/" class="card-img-top" alt="Gyneacology & Obstetrics">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" data-en="Gynecology & Obstetrics" data-kn="ಸ್ತ್ರೀರೋಗ ಮತ್ತು ಪ್ರಸೂತಿಶಾಸ್ತ್ರ">Gynecology & Obstetrics</h5>
+                        <p class="card-text" data-en="Supporting women through pregnancy, childbirth, and postnatal care." data-kn="ಗರ್ಭಧಾರಣೆ, ಪ್ರಸವ ಮತ್ತು ಉತ್ತರ ಪ್ರಸವಕಾಲದ ಆರೈಕೆಯಲ್ಲಿ ಮಹಿಳೆಯರಿಗೆ ಬೆಂಬಲ." >Supporting women through pregnancy, childbirth, and postnatal care.</p>
+                        <a href="appointment.html" class="btn btn-success" data-en="Visit doctor" data-kn="ವೈದ್ಯರನ್ನು ಭೇಟಿ ಮಾಡಿ">Visit doctor</a>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Pediatrics Card -->
+              <div class="col">
+                <div class="card service-card shadow-lg border-light">
+                    <img src="https://th.bing.com/th/id/OIP.wOGH8NTbKA0ZSkeq3ifl9AHaDz?rs=1&pid=ImgDetMain" class="card-img-top" alt="Pediatrics">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" data-en="Pediatrics" data-kn="ಶಿಶು ವೈದ್ಯಕೀಯ">Pediatrics</h5>
+                        <p class="card-text" data-en="Complete care for your child's health, from newborns to adolescents." data-kn="ಹೊಸ ಹುಟ್ಟಿದ ಮಕ್ಕಳಿಂದ ಹಿಡಿದು ಕಿಶೋರಾಗಳವರೆಗೆ ನಿಮ್ಮ ಮಗು ಆರೋಗ್ಯದ ಸಂಪೂರ್ಣ ಆರೈಕೆ.">Complete care for your child's health, from newborns to adolescents.</p>
+                        <a href="appointment.html" class="btn btn-success" data-en="Visit doctor" data-kn="ವೈದ್ಯರನ್ನು ಭೇಟಿ ಮಾಡಿ">Visit doctor</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dermatology Card -->
+            <div class="col">
+                <div class="card service-card shadow-lg border-light">
+                    <img src="https://thumbs.dreamstime.com/z/skilled-female-dermatologist-doing-skin-examination-dermatology-clinic-skilled-female-dermatologist-using-professional-124755084.jpg" class="card-img-top" alt="Dermatology">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" data-en="Dermatology" data-kn="ಚರ್ಮರೋಗಶಾಸ್ತ್ರ">Dermatology</h5>
+                        <p class="card-text" data-en="Treating skin conditions and promoting healthy skin through advanced dermatological services." data-kn="ಚರ್ಮದ ಸಮಸ್ಯೆಗಳನ್ನು ಪರಿಹರಿಸುವುದು ಮತ್ತು ಆರೋಗ್ಯಕರ ಚರ್ಮವನ್ನು ಉತ್ತೇಜಿಸುವ ಆಧುನಿಕ ಚರ್ಮರೋಗ ಸೇವೆಗಳು.">Treating skin conditions and promoting healthy skin through advanced dermatological services.</p>
+                        <a href="appointment.html" class="btn btn-success" data-en="Visit doctor" data-kn="ವೈದ್ಯರನ್ನು ಭೇಟಿ ಮಾಡಿ">Visit doctor</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orthopedics Card -->
+            <div class="col">
+                <div class="card service-card shadow-lg border-light">
+                    <img src="https://www.opaortho.com/wp-content/uploads/2021/12/Doctor-shows-the-spine-conditions.jpg" class="card-img-top" alt="Orthopedics">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" data-en="Orthopedics" data-kn="ಅಸ್ಥಿಶಾಸ್ತ್ರ">Orthopedics</h5>
+                        <p class="card-text" data-en="Comprehensive care for bone, joint, and muscle health with advanced treatments." data-kn="ಮೂಳೆ, ಸಂಧಿ ಮತ್ತು ಸಾಂದ್ರಕ ಆರೋಗ್ಯಕ್ಕೆ ಸಮಗ್ರ ಆರೈಕೆ ಮತ್ತು ಆಧುನಿಕ ಚಿಕಿತ್ಸೆ.">Comprehensive care for bone, joint, and muscle health with advanced treatments.</p>
+                        <a href="appointment.html" class="btn btn-success" data-en="Visit doctor" data-kn="ವೈದ್ಯರನ್ನು ಭೇಟಿ ಮಾಡಿ">Visit doctor</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Cards... -->
+        </div>
+    </section>
+
+    
+    <footer>
+        <p id="footer-text" data-en="&copy; 2024 EasyCare. All Rights Reserved." data-kn="&copy; 2024 ಈಸಿ ಕೇರ್. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.">&copy; 2024 EasyCare. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="service.js"></script>
+    <script>
+        let isKannada = false;
+
+        function toggleLanguage() {
+            isKannada = !isKannada;
+            document.getElementById('lang-toggle').textContent = isKannada ? 'English' : 'ಕನ್ನಡ';
+            
+            document.querySelectorAll('[data-en]').forEach(element => {
+                element.textContent = isKannada ? element.getAttribute('data-kn') : element.getAttribute('data-en');
+            });
+        }
+    </script>
+</body>
+</html>

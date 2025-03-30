@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Video Conference</title>
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <h1>EasyCare Video Conference</h1>
+    <button id="start-call">Start Call</button>
+    <p>Share this link to join the room: <span id="room-link"></span></p>
+
+    <div id="controls">
+        <button id="mute-audio">Mute Audio</button>
+        <button id="toggle-video">Toggle Video</button>
+        <button id="share-screen">Share Screen</button>
+        <button id="end-call">End Call</button>
+
+    </div>
+
+    <div id="videos">
+        <video id="localVideo" autoplay muted></video>
+        <video id="remoteVideo" autoplay></video>
+    </div>
+
+    <div id="chat">
+        <div id="chat-box"></div>
+        <input type="text" id="message-input" placeholder="Type a message..." />
+        <button id="send-message">Send</button>
+    </div>
+
+    <script src="video.js"></script>
+</body>
+</html>
